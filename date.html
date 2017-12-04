@@ -9,9 +9,9 @@
     function dayinfo() {
       var today=new Date();/*오늘날짜정보*/
       console.log("년도 :"+today.getFullyear());
-      console.log("월 :"+today.getMonth());
+      console.log("월 :"+today.getMonth()); //0~11반환
       console.log("일 :"+today.getDate());
-      console.log("요일 :"+today.getDay());
+      console.log("요일 :"+today.getDay());  //0~6반환
       console.log("시 :"+today.getHours());
       console.log("분 :"+today.getMinutes());
       console.log("초 :"+today.getSeconds());
@@ -21,5 +21,8 @@
   <body>
     <h2>new Date()</h2>
     <a href="#"onclick="dayinfo()">날짜정보</a>
+    <h3></h3>
+    <a href="#"onabort="dayinfo()">당신의생일에대한정보</a>
+    <h3></h3>
   </body>
 </html>
