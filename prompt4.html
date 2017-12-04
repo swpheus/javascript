@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>prompt4.html</title>
+    <style media="screen">
+      a{font-size: 40px;}
+      b{font-size: 40px; font-style: oblique; color: red;}
+      span{font-size: 40px; font-style: italic; color:blue;}
+    </style>
+    <script>
+      /*function show(String str) {
+          document.write(str);
+      }*/
+      var mes,num2;
+      function btn() {
+        var num=prompt("홀수짝수판별프로그램","숫자로입력바람");
+        console.log("입력한숫자 :"+num);
+        console.log("데이터 타입 :"+typeof(num));
+         num=Number(num);
+         if(num*0==0){//숫자일때만 실행
+           num2=num%2;
+           mes=(num2==0)? "<b>짝수</b>":"<span>홀수</span>";
+           document.getElementById('show').innerHTML="당신이입력한숫자:"+num+"는"+mes+"입니다.";
+         }else btn();//문자일경우
+        /*if (num%2==0) {
+          document.write("<b>입력하신수는 짝수입니다</b>");
+          String str=prompt("짝수입니다","확인버튼눌러주세요");
+        } else {
+          prompt("홀수입니다")
+        }*/
+        }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+
+      </div>
+      <div class="main">
+        <h2>대화상자: prompt</h2>
+        <h2 id="show"></h2>
+        <a href="#"onclick="btn()">홀수짝수인지판별하자</a>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

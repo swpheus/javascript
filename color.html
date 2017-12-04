@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>color.html</title>
+    <style media="screen">
+      b{color: red; }span{color: blue;}
+    </style>
+    <script>
+      function change(i) {
+          console.log(i);
+          if (i==1) {
+            var bg=prompt("what want you bg color that write")
+            document.bgColor= bg;
+          } else {
+            var font=prompt("what want you font that use")
+            show.style.color=font;
+          }
+
+      }
+    </script>
+  </head>
+  <body>
+    <h2>대화상자:prompt => 배경색 바꾸기</h2>
+    <h2 id="show">우성우</h2>
+    <a href="#" onclick="change('1')">배경색 바꾸기</a>
+    <a href="#" onclick="change('2')">폰트컬러 바꾸기</a>
+  </body>
+</html>

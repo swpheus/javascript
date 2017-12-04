@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>prompt.html</title>
+    <script type="text/javascript">
+    var m,n;
+    function genere() {
+      var num =prompt("당신의 성별은 남자라면 1번 여자라면 2번");
+      console.log(num);
+      console.log("데이터타입"+typeof(num));
+      num=Number(num);
+      console.log("데이터타입"+typeof(num));
+      if (num==1||num==2) {
+          switch (num) {
+            case 1:
+              document.getElementById('id').innerHTML="군대나가라~~"
+            case 2:
+              document.getElementById('id').innerHTML="놀러나다녀라~~"
+          }
+      } else genere();
+
+
+    }
+
+    </script>
+  </head>
+  <body>
+    <h2 id="id"></h2>
+    <a href="#"onclick="genere()">성별입력하자~~</a>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>,
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>script</title>
+    <style media="screen">
+    body{font:40px arial}
+    	b{color:red;}
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var num=prompt("나이를 입력하세요","숫자로 입력바람");
+    document.write("당신의 나이는 :<b>"+num+"</b>");
+    console.log(num);
+    document.getElementById('age').innerHTML="당신의 나이는<b>"+num+"</b>세입니다";
+    </script>
+    <h2>prompt:대화상자</h2>
+    <h2 id="age"></h2>
+    <a href="#"id="btn">나이확인하자</a>
+
+
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>111.html</title>
+    <style media="screen">
+
+    </style>
+    <script type="text/javascript">
+    function age() {
+      var age=prompt("나이입력","0");
+      console.log(age);
+      if (age<10) {document.write("유치원")}
+    }
+    function day() {
+
+      console.log(array.length);
+      for (var i = 0; i <array.length; i++) {
+        console.log(array[i]+"요일");
+        document.write(""+array[i]);
+      }
+    }
+    function dayok() {
+      var array=["일","월","화","수","목","금","토"]
+      var today=new Date();//오늘날짜정보에서 요일 가져옴,라틴값 0-6
+      var week,day1=1;
+      switch (day1) {
+        case 0:week=array[0]; break;
+        case 1:week=array[1]; break;
+        case 2:week=array[2]; break;
+        case 3:week=array[3]; break;
+        case 4:week=array[4]; break;
+        case 5:week=array[5]; break;
+        default :week=array[6]; break;
+
+      }
+          document.getElementById('age').innerHTML="오늘의날짜는<b>"+""+week+"</b>입니다";
+    }
+    </script>
+  </head>
+  <body>
+    <a href="#"onclick="age()">나이확인</a><br />
+    <a href="#"onclick="dayok()">요일확인</a>
+    <h3  id="age"></h3>
+    <h4></h4>
+  </body>
+</html>

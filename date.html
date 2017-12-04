@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>date.html</title>
+  </head>
+  <script type="text/javascript">
+  var month,day,date,year,hour,sec;
+    function dayinfo() {
+      var today=new Date();/*오늘날짜정보*/
+      console.log("년도 :"+today.getFullyear());
+      console.log("월 :"+today.getMonth());
+      console.log("일 :"+today.getDate());
+      console.log("요일 :"+today.getDay());
+      console.log("시 :"+today.getHours());
+      console.log("분 :"+today.getMinutes());
+      console.log("초 :"+today.getSeconds());
+      }
+
+  </script>
+  <body>
+    <h2>new Date()</h2>
+    <a href="#"onclick="dayinfo()">날짜정보</a>
+  </body>
+</html>
