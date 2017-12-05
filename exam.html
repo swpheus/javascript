@@ -29,7 +29,7 @@
     document.getElementById('score2').innerHTML=eng;
     document.getElementById('score3').innerHTML=math;
     document.getElementById('score4').innerHTML=sum;
-    document.getElementById('score5').innerHTML=avg;
+    document.getElementById('score5').innerHTML=Math.round(avg);
 
     if (avg>=90 && avg<=100) level="1등급"
     else if (avg>=80 && avg<90) level="2등급"

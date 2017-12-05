@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>for2.html</title>
+    <style media="screen">
+      body{letter-spacing: 10px; text-align: center;}
+      b{width: 20px; font:12px/20px arial; color:#fff;
+      background:#ff3366; margin: 5px; display: inline-block;}
+
+    </style>
+    <script type="text/javascript">
+      var s="*"
+      var br="<br />"
+      var sum=0;
+      for(j=0; j<10; j++){
+        for (i = 0; i <j; i++) {
+          document.write("<b>"+(sum+=1)+"</b>");
+        }
+        document.write(br);
+      }
+      for(j=0; j<10; j++){
+        for (i = 10; j<i ; i--) {
+          document.write("<b>"+(sum+=1)+"</b>");
+        }
+        document.write(br);
+      }
+
+    </script>
+  </head>
+  <body>
+      <h2>for예제</h2>
+
+  </body>
+</html>
