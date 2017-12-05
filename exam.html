@@ -1,55 +1,80 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>exam.html</title>
-    <style>
-      h2{font:40px arial; font-weight: bold;}
-      table {border:1px solid black;}
-      thead tr {border:1px solid black; border-bottom: 1px;}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>exam.html</title>
+	<style>
+	table{border-collapse:collapse; border-spacing:0; width:300px;
+  margin-top: 30px;}
+	td,th{border:1px solid #aaa; padding:10px;}
+	th,.bg{background:#eee}
+	#level{color:red; font-weight:bold;}
+  #wrapper{width: 300px; margin:auto; text-align: center;}
+  #wrapper ul li {text-align: left;}
+	</style>
+	<script>
+  function num() {
+    var name=prompt("이름입력","성우");
+    var kor=prompt("국어점수입력","00");
+    var eng=prompt("영어점수입력","00");
+    var math=prompt("수학점수입력","00");
+    var sum=Number(kor)+Number(eng)+Number(math);
+    var avg=sum/3;
+    console.log("합계 :"+sum);
+    console.log("평균"+avg);
+    /*console.log("평균(내림)"+Math.floor(avg));
+    console.log("평균(내림)"+Math.ceil(avg));
+    console.log("평균(내림)"+Math.round(avg));*/
+    document.getElementById('score1').innerHTML=kor;
+    document.getElementById('score2').innerHTML=eng;
+    document.getElementById('score3').innerHTML=math;
+    document.getElementById('score4').innerHTML=sum;
+    document.getElementById('score5').innerHTML=avg;
 
-    </style>
-  </head>
-  <body>
-      <div class="wrapper">
-        <h2>2017년 중간고사</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>과목</th>
-              <th>점수</th>
-              <th>합계</th>
-              <th>평균</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>국어</td>
-              <td>숫자로 입력하세요</td>
-              <td>NeN</td>
-              <td>NeN</td>
-            </tr>
-            <tr>
-              <td>영어</td>
-              <td>숫자로 입력하세요</td>
-            </tr>
-            <tr>
-              <td>수학</td>
-              <td>숫자로 입력하세요</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <td>라벨</td>
-            <td>유급입니다</td>
-          </tfoot>
-        </table>
-        <ul>
-          <li>1등급:90~100</li>
-          <li>2등급:80~89</li>
-          <li>3등급:70~79</li>
-          <li>유급:70점이하</li>
-        </ul>
-      </div>
-
-  </body>
+    if (avg>=90 && avg<=100) level="1등급"
+    else if (avg>=80 && avg<90) level="2등급"
+    else if (avg>=70 && avg<80)  level="3등급"
+    else   level="유급"
+    document.getElementById('level').innerHTML=level;
+  }
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+	<h2>2017년 중간고사</h2>
+	<button type="button" id="input" onclick="num()">점수입력</button>
+	<table>
+		<tr>
+			<th>과목</th>
+			<th>점수</th>
+			<th>합계</th>
+			<th>평균</th>
+		</tr>
+		<tr>
+			<td>국어</td>
+			<td id="score1"></td>
+			<td id="score4" rowspan="3"></td>
+			<td id="score5" rowspan="3"></td>
+		</tr>
+		<tr>
+			<td>영어</td>
+			<td id="score2"></td>
+		</tr>
+		<tr>
+			<td>수학</td>
+			<td id="score3"></td>
+		</tr>
+		<tr class="bg">
+			<td id="name"></td>
+			<td>레벌</td>
+			<td colspan="2" id="level">등급표시</td>
+		</tr>
+	</table>
+	<ul>
+		<li>l등급 : 90~100</li>
+		<li>2등급 : 80~89</li>
+		<li>3등급 : 70~79</li>
+		<li>유급 : 70점이하</li>
+	</ul>
+</body>
 </html>
